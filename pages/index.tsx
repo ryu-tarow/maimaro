@@ -62,35 +62,38 @@ export default function Home() {
           <div className="grid grid-cols-2 mt-0.5">
             <SNSButton
               img={"/tiktok.jpg"}
-              imgClass={"w-screen m-auto object-cover h-20 p-1 rounded-lg"}
-              bgClass={"h-20 object-cover"}
+              imgClass={"object-cover m-auto h-12 px-4 sm:px-20 rounded-lg"}
+              bgClass={"object-cover"}
               link={"https://www.tiktok.com/@maimaro.world?"}
             />
             <div className="grid grid-cols-2">
               <SNSButton
                 img={"/instaglam.png"}
-                imgClass={"w-12 m-auto"}
-                bgClass={"bg-pink-500 py-4 px-0 h-20"}
+                imgClass={"w-8 m-auto"}
+                bgClass={"bg-black py-2"}
                 link={"https://www.instagram.com/maimaro.world/"}
               />
               <SNSButton
                 img={"/twitter.png"}
-                imgClass={"w-12 m-auto"}
-                bgClass={"bg-blue-500 py-4 h-20"}
+                imgClass={"w-8 m-auto"}
+                bgClass={"bg-black py-2"}
                 link={"https://twitter.com/maimaro_poppin"}
               />
             </div>
           </div>
           <div className="m-1">
-            <div className="mt-1 bg-white py-1.5 text-center">
-              <h3 className="p-1">キャビるTV</h3>
+            <div className="mt-1 bg-white py-1.5 text-center rounded-md rounded-b-none grid grid-cols-2">
+              <img
+                src="/logo_youtube.jpg"
+                className="m-auto w-20 object-cover h-12"
+              />
               <a href="https://www.youtube.com/channel/UC7fZCrGDqZeFrHA4WUFZncg/featured">
-                <p className="bg-red-500 w-1/2 m-auto rounded-full py-1.5 text-white text-sm shadow-md sm:w-1/3 sm:p-2 duration-300 hover:opacity-70 cursor-pointer">
+                <p className="bg-red-500 px-2 my-4 mr-4 rounded-full py-1.5 text-white text-xs shadow-md sm:p-2 duration-300 hover:opacity-70 cursor-pointer">
                   チャンネル登録
                 </p>
               </a>
             </div>
-            <div className="border border-white">
+            <div className="border rounded-md rounded-t-none border-white">
               <iframe
                 className="w-full h-56 sm:h-72 md:h-96 m-auto max-w-screen-md p-2"
                 src="https://www.youtube.com/embed/_KyTv0TgiWE?start=120"
@@ -98,7 +101,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <ul className="grid grid-cols-2">
+          <ul className="grid grid-cols-2 mt-2">
             <PhotoCard title={"プロフィール"} img={"/profile.jpg"} link={"/"} />
             <PhotoCard title={"（ページ名）"} img={"/top.jpg"} link={"/"} />
           </ul>
