@@ -87,8 +87,8 @@ export default function Home() {
                 src="/logo_youtube.jpg"
                 className="m-auto w-20 object-cover h-12"
               />
-              <a href="https://www.youtube.com/channel/UC7fZCrGDqZeFrHA4WUFZncg/featured">
-                <p className="bg-red-500 px-2 my-4 mr-4 rounded-full py-1.5 text-white text-xs shadow-md sm:p-2 duration-300 hover:opacity-70 cursor-pointer">
+              <a href="https://www.youtube.com/channel/UC7fZCrGDqZeFrHA4WUFZncg/featured" className="my-3">
+                <p className="bg-red-500 w-28 m-auto rounded-full py-1.5 text-white text-xs shadow-md sm:py-3 duration-300 hover:opacity-70 cursor-pointer">
                   チャンネル登録
                 </p>
               </a>

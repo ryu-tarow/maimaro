@@ -15,7 +15,7 @@ export const PhotoCard = ({ title, img, link }: PhotoCardProps) => {
         </h3>
         <img
           src={img}
-          className="w-full h-48 sm:h-72 object-cover rounded-sm"
+          className="w-full h-40 sm:h-72 object-cover rounded-sm"
         />
       </li>
     </Link>
