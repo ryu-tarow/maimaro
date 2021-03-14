@@ -4,6 +4,7 @@ import Head from "next/head";
 export default function Sexy() {
   const title = "まいまろわーるど";
   const url = "https://maimaro.vercel.app/photos/sexy";
+const baseUrl = "https://maimaro.vercel.app";
   const image = "photos/sexy_04.jpg";
   const pageTitle = "まいまろわーるど｜セクシー写真集";
   const description = "まいまろ。のオフィシャルサイト";
@@ -23,14 +24,14 @@ export default function Sexy() {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={`${url}/${image}`} />
+        <meta property="og:image" content={`${baseUrl}/${image}`} />
         <meta property="og:description" content={description} />
         <meta property="og:locale" content="ja_JP" />
 
         {/* TwitterCardの設定 */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@msrmmn" />
-        <meta property="twitter:image" content={`${url}/${image}`} />
+        <meta property="twitter:image" content={`${baseUrl}/${image}`} />
       </Head>
       <main>
         <BackButton link={"/photos"} />
