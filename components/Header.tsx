@@ -2,6 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
+  const menu01 = "プロフィール";
+  const menu02 = "写真集";
+
   const [showNav, setShowNav] = useState<boolean>(false);
   const [showPhotoCategory, setShowPhotoCategory] = useState<boolean>(false);
 
@@ -13,59 +16,61 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed w-screen py-2 bg-purple-500 z-10 shadow-md opacity-90">
-      <div className="h-12 flex justify-between max-w-screen-lg m-auto">
-        <Link href="/">
-          <div className="pt-3 pl-5 text-white cursor-pointer font-mono">
-            (ホームページ名またはロゴ画像)
-          </div>
-        </Link>
-        <button onClick={onClickShowNav} className="mr-2">
-          {showNav ? (
-            <div className="border-white w-12 h-12 border rounded-md text-4xl text-white sm:hidden hover:bg-purple-600 duration-300 hover:opacity-70">
-              ×
+    <header className="">
+      <div className="fixed w-screen py-2 bg-purple-500 z-10 shadow-md opacity-90">
+        <div className="h-12 flex justify-between max-w-screen-lg m-auto">
+          <Link href="/">
+            <div className="pt-3 pl-5 text-white cursor-pointer font-mono">
+              まいまろわーるど
             </div>
-          ) : (
-            <div className="border-white w-12 h-12 border rounded-md text-4xl text-white sm:hidden hover:bg-purple-600 duration-300 hover:opacity-70">
-              =
-            </div>
-          )}
-        </button>
+          </Link>
+          <button onClick={onClickShowNav} className="mr-2">
+            {showNav ? (
+              <div className="rounded-full w-12 h-12 text-4xl text-white sm:hidden hover:bg-purple-600 duration-300 hover:opacity-70">
+                ×
+              </div>
+            ) : (
+              <div className="rounded-full w-12 h-12 text-4xl text-white sm:hidden hover:bg-purple-600 duration-300 hover:opacity-70">
+                =
+              </div>
+            )}
+          </button>
 
-        {/* ヘッダーに表示される */}
-        <nav className="hidden sm:flex py-3 text-white">
-          <ul className="flex">
-            <Link href="/">
-              <li className="mx-5 hover:text-purple-100 cursor-pointer duration-300 hover:opacity-80">
-                メニュー１
-              </li>
-            </Link>
-            <Link href="/">
-              <li className="mx-5 hover:text-purple-100 cursor-pointer duration-300 hover:opacity-80">
-                メニュー２
-              </li>
-            </Link>
-          </ul>
-        </nav>
+          {/* ヘッダーに表示される */}
+          <nav className="hidden sm:flex py-3 text-white">
+            <ul className="flex">
+              <Link href="/profile">
+                <li className="mx-5 hover:text-purple-100 cursor-pointer duration-300 hover:opacity-80">
+                  {menu01}
+                </li>
+              </Link>
+              <Link href="/">
+                <li className="mx-5 hover:text-purple-100 cursor-pointer duration-300 hover:opacity-80">
+                  {menu02}
+                </li>
+              </Link>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       {/* ハンバーガーメニューのクリックで表示される */}
       {showNav && (
-        <nav>
+        <nav className="mt-16 w-full h-full fixed bg-purple-500 z-10 shadow-md opacity-90 right-0">
           <ul className="mt-2 text-center text-white sm:hidden">
-            <Link href="/">
+            <Link href="/profile">
               <li
                 onClick={onClickShowNav}
                 className="px-5 py-2 hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer"
               >
-                メニュー01
+                {menu01}
               </li>
             </Link>
             <li
               onClick={onClickShowPhotoCategory}
               className="px-5 py-2 border-t border-white hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer"
             >
-              リストメニュー01 ▼
+              {menu02}
             </li>
             {showPhotoCategory && (
               <ul className="text-sm">
