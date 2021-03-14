@@ -5,3 +5,4 @@ export { TitleBar } from "components/UIkit/TitleBar.tsx";
 export { ProfileBar } from "components/UIkit/ProfileBar";
 export { Photo } from "components/UIkit/Photo";
 export { PhotoCategory } from "components/UIkit/PhotoCategory";
+export { BackButton } from "components/UIkit/BackButton";

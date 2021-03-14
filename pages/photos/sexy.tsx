@@ -1,16 +1,11 @@
-import {
-  ProfileBar,
-  TitleBar,
-  BackButton,
-  ShareButton,
-} from "components/UIkit";
+import { BackButton, Photo, ShareButton, TitleBar } from "components/UIkit";
 import Head from "next/head";
 
-export default function Profile() {
+export default function Sexy() {
   const title = "まいまろわーるど";
-  const url = "https://maimaro.vercel.app/profile";
-  const image = "profile.jpg";
-  const pageTitle = "まいまろわーるど｜プロフィール";
+  const url = "https://maimaro.vercel.app/photos/sexy";
+  const image = "photos/sexy_04.jpg";
+  const pageTitle = "まいまろわーるど｜セクシー写真集";
   const description = "まいまろ。のオフィシャルサイト";
 
   return (
@@ -38,23 +33,19 @@ export default function Profile() {
         <meta property="twitter:image" content={`${url}/${image}`} />
       </Head>
       <main>
-        <BackButton link={"/"} />
-        <TitleBar text={"プロフィール"} />
-        <div className="max-w-screen-md w-11/12 m-auto grid sm:grid-cols-2">
-          <div>
-            <img src="/profile.jpg" className="p-4 rounded-3xl" />
-          </div>
-          <div className="my-3">
-            <ProfileBar item={"名前"} text={"まいまろ。"} />
-            <ProfileBar item={"出身地"} text={"福岡県"} />
-            <ProfileBar item={"誕生日"} text={"10月7日"} />
-            <ProfileBar item={"血液型"} text={"AB型"} />
-            {/* <ProfileBar item={""} text={""} /> */}
-          </div>
-          <div className="text-center m-3">
-            <p className="text-white text-sm"></p>
-            <ShareButton text={pageTitle} url={url} />
-          </div>
+        <BackButton link={"/photos"} />
+        <TitleBar text={"セクシー"} />
+        <ul className="grid grid-cols-2 w-11/12 m-auto max-w-screen-md sm:grid-cols-3 md:grid-cols-4">
+          <Photo photo={"/sexy.jpg"} photoName={"sexy"} />
+          <Photo photo={"/sexy_02.jpg"} photoName={"sexy02"} />
+          <Photo photo={"/sexy_03.jpg"} photoName={"sexy03"} />
+          <Photo photo={"/sexy_04.jpg"} photoName={"sexy04"} />
+          <Photo photo={"/swimsuit_02.jpg"} photoName={"swimsuit02"} />
+          <Photo photo={"/swimsuit.jpg"} photoName={"swimsuit"} />
+        </ul>
+        <div className="text-center m-3">
+          <p className="text-white text-sm"></p>
+          <ShareButton text={pageTitle} url={url} />
         </div>
       </main>
     </>

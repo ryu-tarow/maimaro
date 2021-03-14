@@ -1,16 +1,11 @@
-import {
-  ProfileBar,
-  TitleBar,
-  BackButton,
-  ShareButton,
-} from "components/UIkit";
+import { BackButton, Photo, ShareButton, TitleBar } from "components/UIkit";
 import Head from "next/head";
 
-export default function Profile() {
+export default function Culture() {
   const title = "まいまろわーるど";
-  const url = "https://maimaro.vercel.app/profile";
-  const image = "profile.jpg";
-  const pageTitle = "まいまろわーるど｜プロフィール";
+  const url = "https://maimaro.vercel.app/photos/culture";
+  const image = "photos/kimono.jpg";
+  const pageTitle = "まいまろわーるど｜日本文化写真集";
   const description = "まいまろ。のオフィシャルサイト";
 
   return (
@@ -38,23 +33,18 @@ export default function Profile() {
         <meta property="twitter:image" content={`${url}/${image}`} />
       </Head>
       <main>
-        <BackButton link={"/"} />
-        <TitleBar text={"プロフィール"} />
-        <div className="max-w-screen-md w-11/12 m-auto grid sm:grid-cols-2">
-          <div>
-            <img src="/profile.jpg" className="p-4 rounded-3xl" />
-          </div>
-          <div className="my-3">
-            <ProfileBar item={"名前"} text={"まいまろ。"} />
-            <ProfileBar item={"出身地"} text={"福岡県"} />
-            <ProfileBar item={"誕生日"} text={"10月7日"} />
-            <ProfileBar item={"血液型"} text={"AB型"} />
-            {/* <ProfileBar item={""} text={""} /> */}
-          </div>
-          <div className="text-center m-3">
-            <p className="text-white text-sm"></p>
-            <ShareButton text={pageTitle} url={url} />
-          </div>
+        <BackButton link={"/photos"} />
+        <TitleBar text={"日本文化"} />
+        <ul className="grid grid-cols-2 w-11/12 m-auto max-w-screen-md sm:grid-cols-3 md:grid-cols-4">
+          <Photo photo={"/kimono.jpg"} photoName={"kimono"} />
+          <Photo photo={"/yukata_04.jpg"} photoName={"yukata02"} />
+          <Photo photo={"/yukata_02.jpg"} photoName={"yukata03"} />
+          <Photo photo={"/yukata_03.jpg"} photoName={"yukata02"} />
+          <Photo photo={"/yukata.jpg"} photoName={"yukata03"} />
+        </ul>
+        <div className="text-center m-3">
+          <p className="text-white text-sm"></p>
+          <ShareButton text={pageTitle} url={url} />
         </div>
       </main>
     </>

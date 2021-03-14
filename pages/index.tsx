@@ -32,7 +32,6 @@ export default function Home() {
         <meta name="twitter:site" content="@msrmmn" />
         <meta property="twitter:image" content={`${url}/${image}`} />
       </Head>
-
       <main>
         <div className="max-w-screen-md m-auto">
           <div className="relative">
@@ -49,10 +48,15 @@ export default function Home() {
                   className="w-32 sm:w-56 duration-300 hover:opacity-70 cursor-pointer sm:hidden"
                 />
               </a>
-              {/* <div className="hidden sm:flex">
-                <img src="/" />
-                <div>（タブレット・PCで表示）</div>
-              </div> */}
+              <div className="hidden sm:flex">
+                <a href="https://www.youtube.com/channel/UC7fZCrGDqZeFrHA4WUFZncg/featured">
+                  <img
+                    src="/snsIcons/youtube.png"
+                    alt=""
+                    className="w-32 sm:w-56 duration-300 hover:opacity-70 cursor-pointer"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -94,7 +98,7 @@ export default function Home() {
                 </p>
               </a>
             </div>
-            <div className="">
+            <div className="mt-2">
               <iframe
                 className="w-full h-52 sm:h-96"
                 src="https://www.youtube.com/embed/_KyTv0TgiWE?start=120"

@@ -25,7 +25,7 @@ export const Photo = ({ photo, photoName }: PhotoProps) => {
           </svg>
         </a>
       </div>
-      <img src={`photos${photo}`} className="" />
+      <img src={`/photos${photo}`} className="" />
     </li>
   );
 };

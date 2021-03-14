@@ -6,14 +6,14 @@ export default function Header() {
   const menu02 = "写真集";
 
   const [showNav, setShowNav] = useState<boolean>(false);
-  const [showPhotoCategory, setShowPhotoCategory] = useState<boolean>(false);
+  // const [showPhotoCategory, setShowPhotoCategory] = useState<boolean>(false);
 
   const onClickShowNav = () => {
     setShowNav(!showNav);
   };
-  const onClickShowPhotoCategory = () => {
-    setShowPhotoCategory(!showPhotoCategory);
-  };
+  // const onClickShowPhotoCategory = () => {
+  //   setShowPhotoCategory(!showPhotoCategory);
+  // };
 
   return (
     <header className="">
@@ -44,7 +44,7 @@ export default function Header() {
                   {menu01}
                 </li>
               </Link>
-              <Link href="/">
+              <Link href="/photos">
                 <li className="mx-5 hover:text-purple-100 cursor-pointer duration-300 hover:opacity-80">
                   {menu02}
                 </li>
@@ -56,25 +56,26 @@ export default function Header() {
 
       {/* ハンバーガーメニューのクリックで表示される */}
       {showNav && (
-        <nav className="mt-16 w-full h-full fixed bg-purple-500 z-10 shadow-md opacity-90 right-0">
+        <nav className="mt-16 w-full h-full fixed bg-purple-500 sm:hidden z-20 shadow-md opacity-90 right-0">
           <ul className="mt-2 text-center text-white sm:hidden">
             <Link href="/profile">
               <li
                 onClick={onClickShowNav}
-                className="px-5 py-2 hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer"
+                className="border-b border-purple-300 text-xl px-5 py-2 hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer"
               >
                 {menu01}
               </li>
             </Link>
-            <li
-              onClick={onClickShowPhotoCategory}
-              className="px-5 py-2 border-t border-white hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer"
-            >
-              {menu02}
-            </li>
-            {showPhotoCategory && (
+            <Link href="/photos">
+              <li
+                onClick={onClickShowNav}
+                className="border-b text-xl px-5 py-2 border-purple-300 hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer"
+              >
+                {menu02}
+              </li>
+            </Link>
+            {/* {showPhotoCategory && (
               <ul className="text-sm">
-                {/* <Link href="/photos"><li onClick={onClickShowNav} className="border-b border-purple-200 py-2 hover:bg-purple-400 duration-300 hover:opacity-80 cursor-pointer">カテゴリ一覧</li></Link> */}
                 <Link href="/">
                   <li
                     onClick={onClickShowNav}
@@ -100,12 +101,12 @@ export default function Header() {
                   </li>
                 </Link>
               </ul>
-            )}
+            )} */}
             <div
               onClick={onClickShowNav}
               className="m-auto w-16 h-16 mt-2 pt-1 text-xs hover:bg-purple-500 duration-300 hover:opacity-70 cursor-pointer"
             >
-              <div className="text-2xl">×</div>
+              <div className="text-2xl rounded-full">×</div>
               close
             </div>
           </ul>
