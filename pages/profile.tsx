@@ -51,10 +51,10 @@ export default function Profile() {
             <ProfileBar item={"血液型"} text={"AB型"} />
             {/* <ProfileBar item={""} text={""} /> */}
           </div>
-          <div className="text-center m-3">
-            <p className="text-white text-sm"></p>
-            <ShareButton text={pageTitle} url={url} />
-          </div>
+        </div>
+        <div className="text-center m-3">
+          <p className="text-white text-sm"></p>
+          <ShareButton text={pageTitle} url={url} />
         </div>
       </main>
     </>
